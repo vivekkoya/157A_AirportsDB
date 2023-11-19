@@ -30,7 +30,7 @@ const RealmApp = ({ children }) => {
 
     return (
         <RealmAppContext.Provider
-            value={realmAppContext}
+            value={RealmAppContext}
         >
             {children}
         </RealmAppContext.Provider>
