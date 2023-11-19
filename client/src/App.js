@@ -80,7 +80,7 @@ function App() {
     const { db } = useMongoDB()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const [airports, setAiprots] = useState([])
+    const [airports, setAiports] = useState([])
 
     useEffect(() => {
         async function wrapQuery() {
