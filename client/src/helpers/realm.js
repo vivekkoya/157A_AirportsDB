@@ -5,8 +5,8 @@ import React, { useContext, useState } from "react"
 const RealmAppContext = React.createContext(null)
 
 const RealmApp = ({ children }) => {
-    const REALM_APP_ID = process.env.REACT_APP_REALM_APP_ID
-    const app = new RealmWeb.App({ id: REALM_APP_ID})
+    // const REALM_APP_ID = process.env.REACT_APP_REALM_APP_ID
+    const app = new RealmWeb.App({ id:"application-1-xpzpg"})
     const [user, setUser] = useState(null)
 
     const logIn = async (email, password) => {
