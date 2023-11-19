@@ -30,11 +30,7 @@ const RealmApp = ({ children }) => {
 
     return (
         <RealmAppContext.Provider
-            value={{
-                logIn,
-                logOut,
-                // user,
-            }}
+            value={realmAppContext}
         >
             {children}
         </RealmAppContext.Provider>
