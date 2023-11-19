@@ -33,7 +33,7 @@ const RealmApp = ({ children }) => {
             value={{
                 logIn,
                 logOut,
-                user,
+                // user,
             }}
         >
             {children}
