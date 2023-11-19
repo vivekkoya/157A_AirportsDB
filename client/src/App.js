@@ -87,7 +87,7 @@ function App() {
             if (user && db) {
                 const allAirports = await db.collection("157b").find({"surface": {"$regex": "^t", "$options": "i"}})
                 console.log("Airports by surface turf", allAirports); 
-                setAiprots(allAirports)
+                setAiports(allAirports)
                 
             }
             
