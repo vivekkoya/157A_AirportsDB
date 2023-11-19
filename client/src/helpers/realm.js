@@ -1,4 +1,5 @@
 import * as RealmWeb from "realm-web"
+import Realm from "realm"
 
 import React, { useContext, useState } from "react"
 
