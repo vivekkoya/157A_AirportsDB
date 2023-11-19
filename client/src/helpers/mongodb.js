@@ -28,6 +28,9 @@ const MongoDB = ({ children }) => {
 
 export const useMongoDB = () => {
     const mdbContext = useContext(MongoDBContext)
+    if (mdbContext == null) {
+        throw new Error("useMongoDB() called outside of a MongoDB?")
+    }
     return mdbContext
 }
 
