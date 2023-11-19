@@ -43,9 +43,6 @@ const RealmApp = ({ children }) => {
 
 export const useRealmApp = () => {
     const realmContext = useContext(RealmAppContext)
-    if (realmContext == null) {
-        throw new Error("useRealmApp() called outside of a RealmApp?")
-    }
     return realmContext
 }
 
