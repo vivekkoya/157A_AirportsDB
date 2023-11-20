@@ -1,6 +1,3 @@
-# 157A_AirportsDB
-**README.md**
-
 # Database Application README
 
 This repository contains the source code for our database application, a project that leverages MongoDB, React, and Atlas Realm to manage and display detailed information about airports and runways worldwide.
