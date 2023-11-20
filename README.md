@@ -54,5 +54,5 @@ Once the dependencies are installed, start the application with the following co
 npm start
 ```
 
-This will launch the development server and open the application in your default web browser. If the browser doesn't open automatically, navigate to [http://localhost:3000](http://localhost:3000) in your browser.
+This will launch the development server and open the application in your default web browser. If the browser doesn't open automatically, navigate to [http://localhost:8080](http://localhost:8080) in your browser.
 
