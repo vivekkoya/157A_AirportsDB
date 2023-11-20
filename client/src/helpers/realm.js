@@ -11,7 +11,7 @@ const RealmApp = async ({ children }) => {
     const [user, setUser] = useState(null)
 
     const logIn = async (email, password) => {
-        const credentials = RealmWeb.Credentials.emailPassword(mongoreadonly, user123)
+        const credentials = RealmWeb.Credentials.emailPassword(email, password)
         try {
             await app.logIn(credentials)
             setUser(app.currentUser)
