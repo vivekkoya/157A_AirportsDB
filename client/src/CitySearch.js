@@ -299,8 +299,7 @@ export function CitySearch({ setCountryCode }, props) {
                     </Heading>
                         <Table.Head>
                             <Table.TextHeaderCell>Airport Name</Table.TextHeaderCell>
-                           
-                            <Table.TextHeaderCell>State</Table.TextHeaderCell>
+                            <Table.TextHeaderCell>State/Region</Table.TextHeaderCell>
                             <Table.TextHeaderCell>Runway Length(ft)</Table.TextHeaderCell>
                             <Table.TextHeaderCell>Runway Width(ft)</Table.TextHeaderCell>
     
