@@ -1,4 +1,4 @@
-import { Heading, Pane, Autocomplete, TextInput, Table } from "evergreen-ui";
+import { Heading, Pane, Autocomplete, TextInput, Button } from "evergreen-ui";
 import React, { useState } from "react";
 
 export function CitySearch({ setCountryCode }, props) {
@@ -264,6 +264,11 @@ export function CitySearch({ setCountryCode }, props) {
         return country ? country.code : '';
     };
 
+    const handleClearResults = () => {
+        setSelectedCountry(countries[0]); // Set country to "Clear Search" values
+        
+    };
+
     setCountryCode(getCountryCode(selectedCountry));
 
     return (
@@ -273,7 +278,8 @@ export function CitySearch({ setCountryCode }, props) {
                 <Heading size={400} marginTop="10" marginBottom="10">
                     Search runways by country name
                 </Heading>
-                <Autocomplete
+                
+                <Autocomplete alignItems="top" justifyContent="top" display="flex" width="50%"
                     title="Country Search"
                     onChange={handleCountryChange}
                     items={countries.map(country => country.name)}
@@ -288,41 +294,15 @@ export function CitySearch({ setCountryCode }, props) {
                                 {...getInputProps()} />
                         );
                     }}
+
                 </Autocomplete>
+                <br></br>
+                <Button marginRight={16} appearance="primary" intent="danger" onClick={handleClearResults}>
+        Clear Results
+      </Button>
 
 
-                {props.countrySearch && props.countrySearch.length > 0 && (
-                    
-                    <Table>
-                        <Heading size={400} marginTop="10" marginBottom="10">
-                       Search Results:
-                    </Heading>
-                        <Table.Head>
-                            <Table.TextHeaderCell>Airport Name</Table.TextHeaderCell>
-                           
-                            <Table.TextHeaderCell>State</Table.TextHeaderCell>
-                            <Table.TextHeaderCell>Runway Length(ft)</Table.TextHeaderCell>
-                            <Table.TextHeaderCell>Runway Width(ft)</Table.TextHeaderCell>
-    
-                            
-                          
-                        </Table.Head>
-                        
-                        <Table.Body height={240}>
-                            {props.countrySearch.map((country) => (
-                                <Table.Row key={country._id}>
-                                    <Table.TextCell>{country.name}</Table.TextCell>
-                                    <Table.TextCell>{country.state}</Table.TextCell>
-                                    <Table.TextCell>{country.result && country.result[0] ? country.result[0].length_ft : 'N/A'}</Table.TextCell>
-                                    <Table.TextCell>{country.result && country.result[0] ? country.result[0].width_ft : 'N/A'}</Table.TextCell>
-                                
-                                    
-                                    
-                                </Table.Row>
-                            ))}
-                        </Table.Body>
-                    </Table>
-                    )}
+             
             </Pane>
         </Pane>
         
