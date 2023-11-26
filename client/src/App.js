@@ -47,7 +47,17 @@ function App() {
         <>
         <CitySearch setCountryCode={setSelectedCountryCode} countrySearch={countrySearch}/>
         <AirportList countrySearch={countrySearch} airports={airports} user={user} logOut={logOut} />
-        
+<iframe
+        style={{
+          background: "#FFFFFF",
+          border: "none",
+          borderRadius: "2px",
+          boxShadow: "0 2px 10px 0 rgba(70, 76, 79, .2)",
+        }}
+        width="640"
+        height="480"
+        src="https://charts.mongodb.com/charts-project-0-itpum/embed/charts?id=6562cdce-35ac-4a23-8759-3e4e604b7b46&maxDataAge=36&theme=light&autoRefresh=true"
+      ></iframe>
         
         </>
         

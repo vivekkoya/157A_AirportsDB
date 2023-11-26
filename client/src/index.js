@@ -12,7 +12,9 @@ root.render(
   <React.StrictMode>
     <RealmApp>
       <MongoDB>
-        <App />
+
+    <App />
+
       </MongoDB>
     </RealmApp>
     
