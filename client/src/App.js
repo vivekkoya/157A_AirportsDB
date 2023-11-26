@@ -23,10 +23,6 @@ function App() {
     
     const [selectedCountryCode, setSelectedCountryCode] = useState(null); // New state to store the selected country code
 
-    
-
-    
-    
 
     useEffect(() => {
         async function wrapQuery() {
@@ -45,14 +41,15 @@ function App() {
                 const chart = sdk.createChart({
                     chartId: "656308f1-7ac8-44b7-8d63-eaefcb4d5267",
                     height: "800px",
-                    filter: {country: selectedCountryCode}
-                    
+                    filter: {country: selectedCountryCode},
+                    // theme: "dark"
                     
                 });
                 const chart1 = sdk.createChart({
                     chartId: "65630fd4-9ab1-4689-8249-82c8468b68f1",
                     height: "800px",
-                    filter: {country: selectedCountryCode}
+                    filter: {country: selectedCountryCode},
+                    theme: "dark"   
                 });
                 await chart.render(document.getElementById("chart"));
                 await chart1.render(document.getElementById("chart1"))
@@ -94,7 +91,7 @@ function App() {
         }}
         width="640"
         height="480"
-        src="https://charts.mongodb.com/charts-project-0-itpum/embed/charts?id=656317ff-f4f9-4bb5-8848-c74168af8ad3&maxDataAge=3600&theme=light&autoRefresh=true"
+        src="https://charts.mongodb.com/charts-project-0-itpum/embed/charts?id=656317ff-f4f9-4bb5-8848-c74168af8ad3&maxDataAge=3600&theme=dark&autoRefresh=true"
     />
 
 
@@ -108,7 +105,7 @@ function App() {
         }}
         width="640"
         height="480"
-        src="https://charts.mongodb.com/charts-project-0-itpum/embed/charts?id=65631eec-e05a-4583-834a-769a588371d7&maxDataAge=3600&theme=dark&autoRefresh=true"
+        src="https://charts.mongodb.com/charts-project-0-itpum/embed/charts?id=65631eec-e05a-4583-834a-769a588371d7&maxDataAge=600&theme=dark&autoRefresh=true"
     />
 </div>
 
