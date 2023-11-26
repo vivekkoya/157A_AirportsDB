@@ -80,20 +80,7 @@ function App() {
         <CitySearch setCountryCode={setSelectedCountryCode} countrySearch={countrySearch}/>
         <br></br>
         <div style={{display: 'flex'}}>
-    <iframe
-        style={{
-            background: '#21313C',
-            border: 'none',
-            borderRadius: '10px',
-            boxShadow: '0 2px 10px 0 rgba(70, 76, 79, .2)',
-            marginLeft: '80px',
-            marginRight: '40px',  // Adjust the margin between frames as needed
-        }}
-        width="640"
-        height="480"
-        src="https://charts.mongodb.com/charts-project-0-itpum/embed/charts?id=656317ff-f4f9-4bb5-8848-c74168af8ad3&maxDataAge=3600&theme=dark&autoRefresh=true"
-    />
-
+        <iframe style={{background: '#21313C',border: 'none',borderRadius: '2px',boxShadow: '0 2px 10px 0 rgba(70, 76, 79, .2)',}} width="640" height="480" src="https://charts.mongodb.com/charts-project-0-itpum/embed/charts?id=656317ff-f4f9-4bb5-8848-c74168af8ad3&maxDataAge=300&theme=dark&autoRefresh=true"></iframe>
 
 
     <iframe
