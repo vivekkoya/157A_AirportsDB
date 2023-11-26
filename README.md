@@ -1,7 +1,7 @@
 # 157A_AirportsDB
 
 # WEBSITE URL:
-To access the app visit this link: [Visit Webapp](https://20c6af2e.157a-airportsdb.pages.dev)
+To access the app visit this link: [Visit Webapp](https://157a-airportsdb.pages.dev/)
 Login Credentials
 email: admin
 password: password
