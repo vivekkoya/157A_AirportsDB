@@ -10,7 +10,7 @@ export function AirportList(props) {
     };
     return (
 
-
+<>
 
         <Pane alignItems="center" justifyContent="center" display="flex" paddingTop={50}>
             <Pane width="100%" padding={16} background="purpleTint" borderRadius={3} elevation={4}>
@@ -95,7 +95,10 @@ export function AirportList(props) {
         </Pane>
 
 
+<div>
+<iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-project-0-itpum/embed/charts?id=6562cdce-35ac-4a23-8759-3e4e604b7b46&maxDataAge=3600&theme=light&autoRefresh=true"></iframe>
+</div>
 
-
+</>
     );
 }
