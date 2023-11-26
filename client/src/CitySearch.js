@@ -249,6 +249,7 @@ export function CitySearch({ setCountryCode }, props) {
         { "name": "Zambia", "code": "ZM" },
         { "name": "Zimbabwe", "code": "ZW" }
     ];
+    const runwaySurface = [{}]
 
     const [selectedCountry, setSelectedCountry] = useState(null);
 
@@ -271,7 +272,7 @@ export function CitySearch({ setCountryCode }, props) {
         <Pane alignItems="top" justifyContent="top" display="flex" paddingLeft={500} paddingTop={20}>
             <Pane width="50%" padding={16} background="blueTint" borderRadius={3} elevation={4}>
                 <Heading size={400} marginTop="10" marginBottom="10">
-                    Search runways by country name
+                    Search runways by country
                 </Heading>
                 <Autocomplete
                     title="Country Search"
