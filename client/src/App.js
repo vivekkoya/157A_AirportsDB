@@ -42,7 +42,7 @@ function App() {
                     chartId: "656308f1-7ac8-44b7-8d63-eaefcb4d5267",
                     height: "800px",
                     filter: {country: selectedCountryCode},
-                    // theme: "dark"
+                    theme: "dark"
                     
                 });
                 const chart1 = sdk.createChart({
