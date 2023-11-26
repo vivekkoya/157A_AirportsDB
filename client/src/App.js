@@ -39,7 +39,7 @@ function App() {
                 });
 
                 const chart = sdk.createChart({
-                    chartId: "656308f1-7ac8-44b7-8d63-eaefcb4d5267",
+                    chartId: "6563b735-e05a-4f9b-8085-769a58b92a66",
                     height: "800px",
                     filter: {country: selectedCountryCode},
                     theme: "dark"
@@ -77,10 +77,21 @@ function App() {
 
     return user && db && user.state === "active" ? (
         <>
+    
+        <div style={{ backgroundColor: 'black', minHeight: '100vh', color: 'white' }}>
         <CitySearch setCountryCode={setSelectedCountryCode} countrySearch={countrySearch}/>
         <br></br>
         <div style={{display: 'flex'}}>
-        <iframe style={{background: '#21313C',border: 'none',borderRadius: '2px',boxShadow: '0 2px 10px 0 rgba(70, 76, 79, .2)',}} width="640" height="480" src="https://charts.mongodb.com/charts-project-0-itpum/embed/charts?id=656317ff-f4f9-4bb5-8848-c74168af8ad3&maxDataAge=300&theme=dark&autoRefresh=true"></iframe>
+        <iframe style={{background: '#21313C',
+                        border: 'none',
+                        borderRadius: '10px',
+                        boxShadow: '0 2px 10px 0 rgba(70, 76, 79, .2)',
+                        marginRight: '100px',
+                        marginLeft: '100px'
+        }} 
+        width="640" 
+        height="480"
+         src="https://charts.mongodb.com/charts-project-0-itpum/embed/charts?id=656317ff-f4f9-4bb5-8848-c74168af8ad3&maxDataAge=300&theme=dark&autoRefresh=true"></iframe>
 
 
     <iframe
@@ -92,7 +103,7 @@ function App() {
         }}
         width="640"
         height="480"
-        src="https://charts.mongodb.com/charts-project-0-itpum/embed/charts?id=65631eec-e05a-4583-834a-769a588371d7&maxDataAge=600&theme=dark&autoRefresh=true"
+        src="https://charts.mongodb.com/charts-project-0-itpum/embed/charts?id=65631eec-e05a-4583-834a-769a588371d7&maxDataAge=3600&theme=dark&autoRefresh=true"
     />
 </div>
 
@@ -103,7 +114,7 @@ function App() {
         
         <div id="chart"></div>
         <div id="chart1"></div>
-     
+        </div>
         </>
         
 
