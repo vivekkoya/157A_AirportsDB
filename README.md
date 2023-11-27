@@ -13,7 +13,74 @@ _Login Credentials_
 
 This repository contains the source code for our database application, a project that leverages MongoDB, React, and Atlas Realm to manage and display detailed information about airports and runways worldwide.
 
+## Search by Country
+```jsx
+exports = async function(arg){
+  // This default function will get a value and find a document in MongoDB
+  // To see plenty more examples of what you can do with functions see: 
+  // https://www.mongodb.com/docs/atlas/app-services/functions/
 
+  // Find the name of the MongoDB service you want to use (see "Linked Data Sources" tab)
+  var serviceName = "mongodb-atlas";
+
+  // Update these to reflect your db/collection
+  var dbName = "airlinedb";
+  var collName = "Airports";
+
+
+  // Get a collection from the context
+  var collection = context.services.get(serviceName).db(dbName).collection(collName);
+
+  
+  
+const pipeline = [
+  {
+    $match: {
+      country: arg,
+    },
+  },
+  {
+    $lookup: {
+      from: "Runways",
+      localField: "icao",
+      foreignField: "airport_ident",
+      as: "result",
+    },
+  },
+  {
+    $project: {
+      name: 1,
+      city: 1,
+      state: 1,
+      "result.length_ft": 1,
+      "result.width_ft": 1,
+    },
+  },
+  {
+    $limit: 100
+  }
+];
+
+
+
+var result;
+  try {
+    
+
+    result = collection.aggregate(pipeline).toArray();
+
+  } catch(err) {
+    console.log("Error occurred while executing findOne:", err.message);
+
+    return { error: err.message };
+  }
+
+  // To call other named functions:
+  // var result = context.functions.execute("function_name", arg1, arg2);
+
+  return {result};
+};
+```
 ## Insertion Example
 ```javascript
 exports = async function(){
