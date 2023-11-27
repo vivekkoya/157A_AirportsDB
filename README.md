@@ -2,7 +2,7 @@
 
 
 
-# WEBSITE URL:
+# Website URL:
 To access the app visit this link: [https://157a-airportsdb.pages.dev/](https://157a-airportsdb.pages.dev/)
 <br>
 _Login Credentials_
