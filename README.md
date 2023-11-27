@@ -170,9 +170,9 @@ exports = async function(){
 ## Credits
 Data Sources:
 <b>
-https://github.com/davidmegginson/ourairports-data
+(https://github.com/davidmegginson/ourairports-data)
 <b>
-https://github.com/mwgg/Airports
+(https://github.com/mwgg/Airports)
 
 ## Getting Started
 
