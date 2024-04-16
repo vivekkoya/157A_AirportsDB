@@ -1,5 +1,5 @@
 # Airport Visualizer
-## Beautifully capture the nuances of airport distribution across the world!
+## Beautifully capture the nuances of airport runway distribution across the world!
 ![image](https://github.com/vivekkoya/157A_AirportsDB/assets/67130044/3697a856-ed49-4a9a-9437-37bcb332e726)
 ![image](https://github.com/vivekkoya/157A_AirportsDB/assets/67130044/231fdf47-ca36-440e-89f8-fa347c094417)
 
